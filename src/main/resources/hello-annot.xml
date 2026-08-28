@@ -5,11 +5,11 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<!-- Product 빈 정의 -->
-	<bean id="product1" class="mylab.order.di.xml.Product">
-		<property name="id" value="P001" />
-		<property name="name" value="노트북" />
-		<property name="price" value="1500000" />
-	</bean>
+	<!-- DI전략2에 해당하는  Configuration file -->
+	
+	<context:component-scan base-package="myspring.di.annot" />
+	
+	<!-- properties file의 정보 설정 -->
+	<context:property-placeholder location="classpath:values.properties" />
 	
 </beans>
